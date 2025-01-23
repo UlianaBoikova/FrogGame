@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0980d0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frogjavafxhope.LoseController">
+   <children>
+      <ImageView fx:id="losePicture" fitHeight="183.0" fitWidth="367.0" layoutX="117.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../java/com/example/frogjavafxhope/assets/Lose.gif" />
+         </image>
+      </ImageView>
+      <Button fx:id="startOverButton" layoutX="219.0" layoutY="250.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="163.0" style="-fx-background-color: #31612c; -fx-border-radius: 30;" text="Start Over" textFill="#f5d7f4">
+         <font>
+            <Font name="BM HANNA 11yrs old OTF" size="21.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

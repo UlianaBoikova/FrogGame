@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleKeyPress" onKeyReleased="#handleKeyReleased" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0980d0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frogjavafxhope.GameController">
+   <children>
+      <ImageView fx:id="frog" fitHeight="43.0" fitWidth="32.0" layoutX="285.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../java/com/example/frogjavafxhope/assets/frog.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lily" fitHeight="30.0" fitWidth="30.0" layoutX="74.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../java/com/example/frogjavafxhope/assets/LilyGold.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lilyScore" fitHeight="15.0" fitWidth="18.0" layoutX="579.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../java/com/example/frogjavafxhope/assets/LilyGold.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="score" alignment="CENTER_RIGHT" layoutX="535.0" layoutY="6.0" prefHeight="17.0" prefWidth="38.0" text="0" textFill="#ffff00">
+         <font>
+            <Font name="BM HANNA 11yrs old OTF" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
