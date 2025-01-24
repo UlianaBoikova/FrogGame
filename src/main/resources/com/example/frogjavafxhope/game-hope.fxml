@@ -23,7 +23,7 @@
             <Image url="@../../../../java/com/example/frogjavafxhope/assets/LilyGold.png" />
          </image>
       </ImageView>
-      <Label fx:id="score" alignment="CENTER_RIGHT" layoutX="535.0" layoutY="6.0" prefHeight="17.0" prefWidth="38.0" text="0" textFill="#ffff00">
+      <Label fx:id="score" alignment="CENTER_RIGHT" layoutX="535.0" layoutY="6.0" prefHeight="17.0" prefWidth="38.0" text="0" textFill="#fff300">
          <font>
             <Font name="BM HANNA 11yrs old OTF" size="15.0" />
          </font>

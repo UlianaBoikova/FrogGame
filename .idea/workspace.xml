@@ -9,34 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91da7f50-b1e5-4cdd-af7f-7c348364be15" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/FrogJavaFxHope_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyGame-1.0.dmg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/BeginningController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/GameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/LilyImageView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/LoseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/TryClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/assets/LilyPink.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/assets/Lose.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/assets/frog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/assets/lily.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/frogjavafxhope/beginning-hope.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/frogjavafxhope/game-hope.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/frogjavafxhope/hello-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/frogjavafxhope/lose-hope.fxml" afterDir="false" />
+    <list default="true" id="91da7f50-b1e5-4cdd-af7f-7c348364be15" name="Changes" comment="Jumping frog">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/assets/LilyGold.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/LilyImageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/LilyImageView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/LoseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/LoseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/TryClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/TryClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/frogjavafxhope/game-hope.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/frogjavafxhope/game-hope.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/frogjavafxhope/lose-hope.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/frogjavafxhope/lose-hope.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,10 +80,21 @@
       <option name="presentableId" value="Default" />
       <updated>1736408394158</updated>
     </task>
+    <task id="LOCAL-00001" summary="Jumping frog">
+      <option name="closed" value="true" />
+      <created>1737620314142</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737620314142</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Jumping frog" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jumping frog" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

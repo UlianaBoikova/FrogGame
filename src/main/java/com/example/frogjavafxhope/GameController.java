@@ -19,7 +19,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -56,14 +55,24 @@ public class GameController {
 
     @FXML
     private Label score;
+
+    private static int scoreInt = 0;
     private final static Image image1 = new Image(
             "file:///Users/ulianaboikova/IdeaProjects/FrogJavaFxHope/src/main/java/com/example/frogjavafxhope/assets/LilyPink.png");
     private final static Random random = new Random();
+
+    public static final int SIZE = 30;
+
+    public static int getScore() {
+        return scoreInt;
+    }
 
 
     @FXML
     void initialize() {
         Platform.runLater(() -> mainPane.requestFocus());
+
+        scoreInt = 0;
         Image image = new Image(
                 "file:///Users/ulianaboikova/IdeaProjects/FrogJavaFxHope/src/main/java/com/example/frogjavafxhope/assets/frog.png");
         frog.setImage(image);
@@ -83,7 +92,7 @@ public class GameController {
         Timeline timeline = new Timeline();
         timeline.setCycleCount(Timeline.INDEFINITE);
 
-        KeyFrame keyFrame = new KeyFrame(Duration.seconds(0.0025), event -> {
+        KeyFrame keyFrame = new KeyFrame(Duration.seconds(0.00225), event -> {
 
 
             if (frog.getLayoutY() >= 410) {
@@ -111,9 +120,11 @@ public class GameController {
             }
             if (isFalling && isJumpDone) {
                 frog.setLayoutY(frog.getLayoutY() + 0.5);
+                doubleJump.set(0);
             }
             if (frog.getBoundsInParent().intersects(lily.getBoundsInParent())) {
                 score.setText(String.valueOf(Integer.parseInt(score.getText()) + 1));
+                scoreInt += 1;
                 lily.setLayoutY(random.nextInt(370) + 1);
                 lily.setLayoutX(random.nextInt(570) + 1);
             }
@@ -123,18 +134,25 @@ public class GameController {
         timeline.play();
         System.out.println();
 
+
+
+
+
+
         ArrayList<LilyImageView> firstLilies = new ArrayList<>();
 
         for (int i = 1; i <= 10; i++) {
-            createNewFlower(i * 60 - 60 + 1, 201,i * 60 - 60 + 1, 1, i * 60, 200, firstLilies, 30);
+            createNewFlower(random.nextInt(60) + i * 60 - 60 + 1, random.nextInt(200) + 1,i * 60 - 60 + 1, 1, i * 60, 200, firstLilies, 30);
         }
 
 
         ArrayList<LilyImageView> secondLilies = new ArrayList<>();
         for (int i = 1; i <= 10; i++) {
-            createNewFlower(i * 60 - 60 + 1, 1, i * 60 - 60 + 1, 201, i * 60, 370, secondLilies, 0.5);
+            createNewFlower(random.nextInt(60) + i * 60 - 60 + 1, random.nextInt(170) + 201, i * 60 - 60 + 1, 201, i * 60, 370, secondLilies, 0.5);
         }
 
+        firstLilies.get(4).getLily().setLayoutY(207);
+        firstLilies.get(4).getLily().setLayoutX(285);
 
         liliesGrowing(firstLilies);
 
@@ -219,7 +237,8 @@ public class GameController {
         if (keyEvent.getCode() == UP) {
             boolean isJumpPossible = false;
             for (LilyImageView flower: lilies) {
-                if (frog.getBoundsInParent().intersects(flower.getLily().getBoundsInParent())) {
+                Line line = new Line(frog.getLayoutX(), frog.getLayoutY() + 42, frog.getLayoutX() + 32, frog.getLayoutY() + 42);
+                if (line.getBoundsInParent().intersects(flower.getLily().getBoundsInParent())) {
                     isJumpPossible = true;
                     doubleJump.set(1);
                 }
@@ -228,12 +247,12 @@ public class GameController {
                 if (doubleJump.get() == 2) doubleJump.set(0);
                 doubleJump.set(doubleJump.get() + 1);
                 Timeline timeline = new Timeline();
-                timeline.setCycleCount(300);
+                timeline.setCycleCount(400);
 
-                KeyFrame keyFrame = new KeyFrame(Duration.seconds(0.00125), event -> {
+                KeyFrame keyFrame = new KeyFrame(Duration.seconds(0.0015), event -> {
                     isJumpDone = false;
                     frog.setLayoutY(frog.getLayoutY() - 0.5);
-                    if (timeline.getCycleCount() == 300) isJumpDone = true;
+                    if (timeline.getCycleCount() == 400) isJumpDone = true;
 
                 });
                 timeline.getKeyFrames().add(keyFrame);
@@ -284,7 +303,7 @@ public class GameController {
                     }
                 })
         );
-        leftTimeline.setCycleCount(Timeline.INDEFINITE); // зацикливаем Timeline
+        leftTimeline.setCycleCount(150); // зацикливаем Timeline
         leftTimeline.play(); // запускаем движение
     }
 
@@ -301,7 +320,7 @@ public class GameController {
                     }
                 })
         );
-        rightTimeline.setCycleCount(Timeline.INDEFINITE); // зацикливаем Timeline
+        rightTimeline.setCycleCount(150); // зацикливаем Timeline
         rightTimeline.play(); // запускаем движение
     }
 

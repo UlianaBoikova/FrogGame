@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
@@ -18,5 +19,15 @@
             <Font name="BM HANNA 11yrs old OTF" size="21.0" />
          </font>
       </Button>
+      <Label fx:id="score" alignment="CENTER_RIGHT" layoutX="535.0" layoutY="6.0" prefHeight="17.0" prefWidth="38.0" text="0" textFill="#ffee00">
+         <font>
+            <Font name="BM HANNA 11yrs old OTF" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="lilyScore" fitHeight="15.0" fitWidth="18.0" layoutX="579.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../java/com/example/frogjavafxhope/assets/LilyGold.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
