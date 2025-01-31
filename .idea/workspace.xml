@@ -9,9 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91da7f50-b1e5-4cdd-af7f-7c348364be15" name="Changes" comment="Some fixing">
+    <list default="true" id="91da7f50-b1e5-4cdd-af7f-7c348364be15" name="Changes" comment="Modified jump">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/assets/frogJump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/assets/frogSit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/assets/goldLily.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/assets/goldLilyLeast.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/assets/lilyLeaf-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/assets/lilyLeast.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/LoseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/LoseController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +51,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/ulianaboikova/IdeaProjects/FrogJavaFxHope",
-    "project.structure.last.edited": "Artifacts",
+    "last_directory_selection": "/Users/ulianaboikova/IdeaProjects/FrogJavaFxHope/src/main/java/com/example/frogjavafxhope/assets",
+    "last_opened_file_path": "/Users/ulianaboikova/IdeaProjects/FrogJavaFxHope/src/main/java/com/example/frogjavafxhope/assets",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/assets" />
+      <recent name="$PROJECT_DIR$/src/main/resources/com/example/frogjavafxhope" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/example/frogjavafxhope/assets" />
     </key>
@@ -58,7 +71,7 @@
     <configuration name="HelloApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.frogjavafxhope.HelloApplication" />
       <module name="FrogJavaFxHope" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;$USER_HOME$/Downloads/jdk-17.0.11_macos-x64_bin.tar&quot; --add-modules=javafx.controls" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;$PROJECT_DIR$/jdk-17.0.11.jdk&quot; --add-modules=javafx.controls" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -89,14 +102,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737718440142</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Modified jump">
+      <option name="closed" value="true" />
+      <created>1737803875520</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737803875520</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Jumping frog" />
     <MESSAGE value="Some fixing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some fixing" />
+    <MESSAGE value="Modified jump" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified jump" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

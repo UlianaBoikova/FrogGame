@@ -34,7 +34,7 @@ public class LoseController {
     @FXML
     void initialize() {
         Image imageGold = new Image(
-                "file:///Users/ulianaboikova/IdeaProjects/FrogJavaFxHope/src/main/java/com/example/frogjavafxhope/assets/LilyGold.png");
+                "file:///Users/ulianaboikova/IdeaProjects/FrogJavaFxHope/src/main/java/com/example/frogjavafxhope/assets/goldLilyLeast.png");
 
         lilyScore.setImage(imageGold);
         scoreGame += GameController.getScore();

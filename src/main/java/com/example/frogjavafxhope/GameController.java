@@ -59,10 +59,16 @@ public class GameController {
 
     private static int scoreInt = 0;
     private final static Image image1 = new Image(
-            "file:///Users/ulianaboikova/IdeaProjects/FrogJavaFxHope/src/main/java/com/example/frogjavafxhope/assets/LilyPink.png");
+            "file:///Users/ulianaboikova/IdeaProjects/FrogJavaFxHope/src/main/java/com/example/frogjavafxhope/assets/lilyLeaf-2.png");
+    private final static Image imageFrog = new Image(
+            "file:///Users/ulianaboikova/IdeaProjects/FrogJavaFxHope/src/main/java/com/example/frogjavafxhope/assets/frog.png");
     private final static Random random = new Random();
 
     public static final int SIZE = 30;
+    Image imageFrogSit = new Image(
+            "file:///Users/ulianaboikova/IdeaProjects/FrogJavaFxHope/src/main/java/com/example/frogjavafxhope/assets/frogSit.png");
+    Image imageFrogJump = new Image(
+            "file:///Users/ulianaboikova/IdeaProjects/FrogJavaFxHope/src/main/java/com/example/frogjavafxhope/assets/frogJump.png");
 
     public static int getScore() {
         return scoreInt;
@@ -74,13 +80,12 @@ public class GameController {
         Platform.runLater(() -> mainPane.requestFocus());
 
         scoreInt = 0;
-        Image image = new Image(
-                "file:///Users/ulianaboikova/IdeaProjects/FrogJavaFxHope/src/main/java/com/example/frogjavafxhope/assets/frog.png");
-        frog.setImage(image);
+
+        frog.setImage(imageFrogSit);
         frog.setFitWidth(32.0);
         frog.setFitHeight(43.0);
         Image imageGold = new Image(
-                "file:///Users/ulianaboikova/IdeaProjects/FrogJavaFxHope/src/main/java/com/example/frogjavafxhope/assets/LilyGold.png");
+                "file:///Users/ulianaboikova/IdeaProjects/FrogJavaFxHope/src/main/java/com/example/frogjavafxhope/assets/goldLilyLeast.png");
 
         lilyScore.setImage(imageGold);
 
@@ -116,9 +121,10 @@ public class GameController {
 
             boolean isFalling = true;
             for (LilyImageView flower: lilies) {
-                Line line = new Line(frog.getLayoutX(), frog.getLayoutY() + 42, frog.getLayoutX() + 32, frog.getLayoutY() + 42);
+                Line line = new Line(frog.getLayoutX(), frog.getLayoutY() + 32, frog.getLayoutX() + 32, frog.getLayoutY() + 32);
                 if (line.getBoundsInParent().intersects(flower.getLily().getBoundsInParent())) {
                     isFalling = false;
+                    frog.setImage(imageFrogSit);
                     jumpDownCycleCount.set(1);
                 }
             }
@@ -128,6 +134,7 @@ public class GameController {
                 jumpDownCycleCount.set(jumpDownCycleCount.get() + 1);
                 //System.out.println("Jump Down: " + (2 / Math.pow((1 + (double) 20 / jumpDownCycleCount.get()), 1.5)));
                 frog.setLayoutY(frog.getLayoutY() + (2 / Math.pow((1 + (double) 60 / jumpDownCycleCount.get()), 1.5)));
+                frog.setImage(imageFrogJump);
             }
             if (frog.getBoundsInParent().intersects(lily.getBoundsInParent())) {
                 score.setText(String.valueOf(Integer.parseInt(score.getText()) + 1));
@@ -231,7 +238,7 @@ public class GameController {
 
             boolean isJumpPossible = false;
             for (LilyImageView flower: lilies) {
-                Line line = new Line(frog.getLayoutX(), frog.getLayoutY() + 42, frog.getLayoutX() + 32, frog.getLayoutY() + 42);
+                Line line = new Line(frog.getLayoutX(), frog.getLayoutY() + 32, frog.getLayoutX() + 32, frog.getLayoutY() + 32);
                 if (line.getBoundsInParent().intersects(flower.getLily().getBoundsInParent())) {
                     isJumpPossible = true;
                     jumpUpCycleCount.set(0);
@@ -248,6 +255,7 @@ public class GameController {
                     jumpUpCycleCount.set(jumpUpCycleCount.get() + 1);
                     //System.out.println("Jump UP: " + ((2 / Math.pow((1 + (double) jumpUpCycleCount.get() / 20), 1.5))));
                     frog.setLayoutY(frog.getLayoutY() - (2 / Math.pow((1 + (double) jumpUpCycleCount.get() / 60), 1.5)));
+                    frog.setImage(imageFrogJump);
                     if (jumpUpCycleCount.get() == 200) isJumpDone = true;
                     if (jumpUpCycleCount.get() == 200) {
                         jumpUpCycleCount.set(0);
